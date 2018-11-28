@@ -1,0 +1,14 @@
+services:
+  flask:
+    build: .
+    command: su -m ctf -c "python3 /var/www/yuligeeeeee/app.py"
+    environment:
+      SECRET_KEY: '6f6d3d7969a1909bdc68376c0430e117'
+    image: flask
+    labels:
+      '5000': http://IP:PORT
+    ports:
+    - 19008:5000
+version: '3'
+
+
