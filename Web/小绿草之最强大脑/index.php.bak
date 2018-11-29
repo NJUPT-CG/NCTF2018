@@ -1,0 +1,32 @@
+<?php
+if(isset($_SESSION['ans']) && isset($_POST['ans'])){
+	if(($_SESSION['ans'])+intval($_POST['input'])!=$_POST['ans']){
+		session_destroy();
+		echo '
+		<script language="javascript">  
+		alert("怎么没算对呢？");  
+		window.history.back(-1);  </script>';
+	}
+	else{
+		if(intval(time())-$_SESSION['time']<1){
+			session_destroy();
+			echo '
+			<script language="javascript">  
+			alert("你手速太快啦，服务器承受不住!!!");  
+			window.history.back(-1); </script> ';
+		}
+		if(intval(time())-$_SESSION['time']>2){
+			session_destroy();
+			echo '
+			<script language="javascript">  
+			alert("你算的太慢了少年！");  
+			window.history.back(-1); </script> ';
+		}
+		echo '
+		<script language="javascript">  
+		alert("tql，算对了！！");  
+	     </script> ';
+		$_SESSION['count']++;
+	}
+}
+?>

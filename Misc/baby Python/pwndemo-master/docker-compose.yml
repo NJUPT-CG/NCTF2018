@@ -1,0 +1,7 @@
+version: "2"
+services:
+  easy_python:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "2360:2360"
