@@ -1,4 +1,4 @@
-# I wanna play CTF [Done] [Released] [192pts 43solves]
+# I wanna play CTF [192pts 43solves]
 
 ==Difficulty: Interesting==
 
