@@ -1,0 +1,9 @@
+*~
+*.id*
+*.nam
+*.til
+peda*
+.gdb*
+test*
+*.pyc
+
